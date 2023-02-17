@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@mdi/js": "^7.1.96",
+    "@vueuse/core": "^9.12.0",
     "mdi-vue": "^3.0.13",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"

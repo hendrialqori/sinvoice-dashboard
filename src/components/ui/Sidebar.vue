@@ -12,7 +12,7 @@ import { tw } from "@/utils/tailwindClass";
 
 <template>
   <aside
-    class="w-[220px] md:w-[20%] bg-white py-6 pl-4 flex flex-col justify-between fixed md:relative top-0 bottom-0 z-[10] shadow-md"
+    class="w-[220px] md:w-[20%] bg-white py-6 pl-4 hidden md:flex flex-col justify-between fixed md:relative top-0 bottom-0 z-[10] shadow-md min-h-screen"
   >
     <div class="flex flex-col gap-10" aria-label="top-side">
       <div class="flex items-center gap-1" aria-label="logo">
