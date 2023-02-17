@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Wrapper from "./wrapper.vue";
+import Wrapper from "./Wrapper.vue";
 import { onClickOutside } from "@vueuse/core";
 import { ref } from "vue";
 import type { VNodeRef } from "vue";
