@@ -5,7 +5,7 @@ import { tw } from "@/utils/tailwindClass";
 <template>
   <main>
     <section aria-label="main-content">
-      <h1 class="text-2xl font-semibold">Hello Hendri</h1>
+      <h1 class="text-2xl font-semibold">Hello Hendri Alqori :)</h1>
       <div class="flex items-center gap-4 mt-12" aria-label="balances">
         <figure class="bg-purple-100 rounded-md px-6 py-6 flex-1">
           <div
