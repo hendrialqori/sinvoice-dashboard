@@ -43,11 +43,11 @@ import { tw } from "@/utils/tailwindClass";
           <StackIcon />
           <span>Dashboard</span>
         </RouterLink>
-        <RouterLink to="/about" class="unactive" active-class="active">
+        <RouterLink to="/invoice" class="unactive" active-class="active">
           <InvoiceIcon />
           <span>Invoice</span>
         </RouterLink>
-        <RouterLink to="/about" class="unactive" active-class="active">
+        <RouterLink to="/transaction" class="unactive" active-class="active">
           <TransactionIcon />
           <span>Transaction</span>
         </RouterLink>

@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import Wrapper from "./Wrapper.vue";
-import { onClickOutside } from "@vueuse/core";
-import { ref } from "vue";
-import type { VNodeRef } from "vue";
 
 type Props = {
   isOpen: boolean;
@@ -12,23 +9,26 @@ defineProps<Props>();
 
 const emit = defineEmits(["close"]);
 
-const modalWrapper = ref<VNodeRef | null>(null);
-
-onClickOutside(modalWrapper, (e: Event) => {
-  e.stopPropagation();
+function closeModal() {
   emit("close");
-});
+}
+
+function handleSubmit(e: Event) {
+  closeModal();
+}
+
+function stopPropagation(e: Event) {
+  e.stopPropagation();
+}
 </script>
 
 <template>
   <Wrapper>
-    <div
-      :ref="modalWrapper"
-      v-if="isOpen"
-      class="modal-wrapper"
-      @click="$emit('close')"
-    >
-      <div class="w-4/12 mx-auto rounded-lg bg-white p-5">
+    <div v-show="isOpen" class="modal-wrapper" @click="closeModal">
+      <div
+        @click="stopPropagation"
+        class="w-4/12 mx-auto rounded-lg bg-white p-5"
+      >
         <header class="flex justify-between items-start mb-4">
           <div class="flex gap-1">
             <mdicon name="flag-outline" class="rotate-[-23deg]" />
@@ -39,11 +39,11 @@ onClickOutside(modalWrapper, (e: Event) => {
               </p>
             </div>
           </div>
-          <button @click="$emit('toggle')">
+          <button @click="closeModal">
             <mdicon name="close" size="17" />
           </button>
         </header>
-        <form class="grid gap-2">
+        <form @submit.prevent="handleSubmit" class="grid gap-2">
           <div>
             <label for="title" class="text-xs font-semibold">Title*</label>
             <input
