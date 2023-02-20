@@ -20,9 +20,24 @@ const router = createRouter({
       component: () => import("@/views/TransactionView.vue"),
     },
     {
-      path: "/about",
-      name: "about",
-      component: () => import("@/views/AboutView.vue"),
+      path: "/payment",
+      name: "payment",
+      component: () => import("@/views/PaymentView.vue"),
+    },
+    {
+      path: "/setting",
+      name: "setting",
+      component: () => import("@/views/SettingView.vue"),
+    },
+    {
+      path: "/support",
+      name: "support",
+      component: () => import("@/views/SupportView.vue"),
+    },
+    {
+      path: "/community",
+      name: "community",
+      component: () => import("@/views/CommunityView.vue"),
     },
   ],
 });

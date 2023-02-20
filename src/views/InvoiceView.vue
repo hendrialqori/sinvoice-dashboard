@@ -49,7 +49,6 @@ const imagePreview = computed(() => {
           :class="`border-dashed border-2 border-sky-200 rounded-2xl bg-sky-100 mt-5 p-5 ${
             isDragZone ? 'drag-active' : ''
           }`"
-          draggable="true"
           @dragenter.prevent="toggleDragZone"
           @dragleave.prevent="toggleDragZone"
           @dragover.prevent
